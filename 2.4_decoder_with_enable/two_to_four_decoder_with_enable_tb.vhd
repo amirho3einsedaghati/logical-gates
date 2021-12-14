@@ -1,14 +1,14 @@
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
+
+ENTITY two_to_four_decoder_with_enable_tb IS
+END two_to_four_decoder_with_enable_tb;
  
-ENTITY two_to_four_encoder_tb IS
-END two_to_four_encoder_tb;
- 
-ARCHITECTURE behavior OF two_to_four_encoder_tb IS 
+ARCHITECTURE behavior OF two_to_four_decoder_with_enable_tb IS 
  
     -- Component Declaration for the Unit Under Test (UUT)
  
-    COMPONENT two_to_four_encoder
+    COMPONENT two_to_four_decoder_with_enable
     PORT(
          a : IN  std_logic;
          b : IN  std_logic;
@@ -25,16 +25,17 @@ ARCHITECTURE behavior OF two_to_four_encoder_tb IS
 
  	--Outputs
    signal q : std_logic_vector(3 downto 0);
-
+ 
 BEGIN
  
 	-- Instantiate the Unit Under Test (UUT)
-   uut: two_to_four_encoder PORT MAP (
+   uut: two_to_four_decoder_with_enable PORT MAP (
           a => a,
           b => b,
           en => en,
           q => q
         );
+ 
 
    -- Stimulus process
    stim_proc: process

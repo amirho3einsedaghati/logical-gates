@@ -2,7 +2,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
 ---------------- gate level ------------------
---entity two_to_four_encoder is
+--entity two_to_four_decoder_with_enable is
     --Port ( --a : in  STD_LOGIC;
            --b : in  STD_LOGIC;
            --en : in  STD_LOGIC;
@@ -10,10 +10,10 @@ use IEEE.STD_LOGIC_1164.ALL;
            --q1 : out  STD_LOGIC;
            --q2 : out  STD_LOGIC;
            --q3 : out  STD_LOGIC);
---end two_to_four_encoder;
+--end two_to_four_decoder_with_enable;
 
 
---architecture Behavioral of two_to_four_encoder is
+--architecture Behavioral of two_to_four_decoder_with_enable is
 --begin
 		--q0 <= (not a) and (not b) and en;
 		--q1 <= (not a) and b and en;
@@ -23,15 +23,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 
 -------------------------when/else and with/select/when entity----------------------------
-entity two_to_four_encoder is
+entity two_to_four_decoder_with_enable is
     Port ( a : in  STD_LOGIC;
            b : in  STD_LOGIC;
            en : in  STD_LOGIC;
            q : out  STD_LOGIC_VECTOR(3 downto 0));
-end two_to_four_encoder;
+end two_to_four_decoder_with_enable;
 
 
-architecture Behavioral of two_to_four_encoder is
+architecture Behavioral of two_to_four_decoder_with_enable is
 
 signal Enab: std_logic_vector(2 downto 0);
 begin
@@ -55,3 +55,5 @@ begin
 		  "0000" when others;
 			
 end Behavioral;
+
+
