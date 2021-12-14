@@ -22,8 +22,6 @@ ARCHITECTURE behavior OF two_to_four_decoder_with_enable_tb IS
    signal a : std_logic := '0';
    signal b : std_logic := '0';
    signal en : std_logic := '0';
-
- 	--Outputs
    signal q : std_logic_vector(3 downto 0);
  
 BEGIN
